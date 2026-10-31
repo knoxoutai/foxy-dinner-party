@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { pastEvents, pickFeatured, isUpcoming } from '../../lib/events';
+
+const events = await getCollection('events');
+const archived = pastEvents(events);
+const featured = pickFeatured(events);
+const nextUp = featured && isUpcoming(featured) ? featured : undefined;
+const image = nextUp?.data.ogImage ?? archived[0]?.data.ogImage ?? '/images/thanksgiving/og.jpg';
+---
+
+<Base
+  title="Past Parties · Foxy's Dinner Party"
+  description="Past Foxy's Dinner Party gatherings, kept so the invitation, the menu, and the mayhem stay on the record."
+  image={image}
+  path="/archive"
+>
+  <div class="page">
+    <div class="sheet">
+      <header class="sheet-head">
+        <p class="eyebrow">Past gatherings</p>
+        <h1 class="display">The Archive</h1>
+        <p class="display-sub">Every dinner stays on the record.</p>
+      </header>
+
+      {
+        nextUp && (
+          <aside class="next-banner lede">
+            <p class="eyebrow">Still ahead</p>
+            <p>
+              <a href="/">{nextUp.data.title}</a>
+            </p>
+            <p>
+              {nextUp.data.dateLabel} · Doors {nextUp.data.doors}
+            </p>
+          </aside>
+        )
+      }
+
+      {
+        archived.length === 0 ? (
+          <p class="empty lede">
+            Nothing has been retired yet. The next party is still on the home page, and it will settle here the day after it happens.
+          </p>
+        ) : (
+          <div class="archive-grid">
+            {archived.map((event) => (
+              <a class="party-card" href={`/events/${event.id}`}>
+                <img src={event.data.hero} alt="" width={event.data.heroWidth} height={event.data.heroHeight} />
+                <p class="eyebrow">{event.data.dateLabel}</p>
+                <h2>{event.data.title}</h2>
+                <p>{event.data.summary}</p>
+                <span class="more">Read the invitation</span>
+              </a>
+            ))}
+          </div>
+        )
+      }
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,34 @@
+---
+const path = Astro.url.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '') || '/';
+const items = [
+  { href: '/', label: 'Home' },
+  { href: '/archive', label: 'Archive' },
+  { href: '/faq', label: 'FAQ' },
+];
+
+function current(href: string) {
+  if (href === '/') return path === '/';
+  return path === href;
+}
+---
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="/">
+      <span class="monogram" aria-hidden="true">F</span>
+      <span>
+        <span class="brand-name">Foxy's</span>
+        <span class="brand-sub">Dinner Party</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      {
+        items.map((item) => (
+          <a href={item.href} aria-current={current(item.href) ? 'page' : undefined}>
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>

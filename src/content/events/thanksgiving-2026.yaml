@@ -1,0 +1,98 @@
+# One file = one party. The filename is the URL: /events/thanksgiving-2026
+# Home shows the earliest party whose date is today or later.
+# Times are wall-clock in the zone from src/config.ts.
+# The day after `date`, the next build lists it in the Archive. See README.md.
+
+title: "Foxy's Thanksgiving Day Dinner: A Celebration of Gratitude, Gravy, and the Pie We Fight Over!"
+date: "2026-11-26"
+dateLabel: "Thursday, November 26, 2026"
+time: "17:00"
+endTime: "22:00"
+doors: "5:00 PM"
+summary: "A candlelit Thanksgiving supper of gratitude, gravy, Justin's smoked meats, and Morgan's award-winning Arizona pecan pie."
+rsvpUrl: "https://docs.google.com/spreadsheets/d/1a-KkhFHaeCP966Ak75BzxpR5PX4f3BLOmeK2XYbZXOU/edit?usp=sharing"
+rsvpLabel: "RSVP & Sign Up for Sides!"
+location: "Foxy's Dinner Party"
+hero: /images/thanksgiving/hero.webp
+heroAlt: "A candlelit art deco Thanksgiving table crowned with a roast turkey, crystal glassware, and gold flatware"
+heroWidth: 1280
+heroHeight: 720
+heroFrame: false
+ogImage: /images/thanksgiving/og.jpg
+sections:
+  - type: prose
+    paragraphs:
+      - "Gather 'round, hungry hearts and lucky leftovers! You're cordially invited to our annual, fabulous Thanksgiving Day dinner party on **Thursday, November 26, 2026**. Doors open at **5:00 PM** for an evening of candlelight, cousins, and carbohydrates we will not be apologizing for."
+      - "Prepare for a night packed with hearty laughter, second helpings, and the finest company this side of the gravy boat. This year, we're unveiling our brand-new game: **Thanks, With Receipts** show-and-tell! Bring a photo, a keepsake, or a story that proves what you're grateful for — and, if you're brave, the family tale that still makes the table lose it. Whether it's a legendary toast, an unforgettable kitchen mishap, or a perfectly awkward blessing, get ready to share the love, the laughs, and the pie."
+      - "Whether you're celebrating with your people, borrowing ours, or simply in need of a chair and a warm plate, there's always an extra seat — and definitely extra gravy — for you."
+  - type: actions
+    links:
+      - label: "RSVP & Sign Up for Sides!"
+        to: rsvp
+  - type: steps
+    heading: "Thanks, With Receipts"
+    lead: "How it works:"
+    image: /images/thanksgiving/emblem.webp
+    imageAlt: "Gold art deco emblem of a fox in a bow tie beside a cornucopia of pumpkins, wheat, and grapes"
+    imageWidth: 1024
+    imageHeight: 1024
+    paragraphs:
+      - "Get ready for the main event: **Thanks, With Receipts**! This heartfelt and slightly unhinged show-and-tell celebrates the people, plates, and plot twists that made the year. Bring a funny photo or write down the thing you're most thankful for. We'll share them over cocktails and vote for **Most Sincere Thanks** and **Most Incriminating Receipt**."
+      - "**Your Mission:** Bring a photo, a keepsake, or a one-sentence thanks. A mildly incriminating family story is enthusiastically welcome."
+    steps:
+      - text: "Submit your thanks on arrival — names optional, legends encouraged"
+      - label: "Gallery Walk"
+        text: "Browse the board with a cocktail in hand"
+      - label: "The Vote"
+        text: "Everyone votes for \"Most Sincere Thanks\" and \"Most Incriminating Receipt\""
+      - text: "Winners get bragging rights, a fabulous prize, and first crack at the pecan pie"
+  - type: menu
+    heading: "Sample Menu Highlights:"
+    image: /images/thanksgiving/feast.webp
+    imageAlt: "Pecan pie on a gold stand, smoked brisket, mashed potatoes, cranberry sauce, and a ruby cocktail in cut crystal"
+    imageWidth: 1152
+    imageHeight: 864
+    intro: "Prepare your most celebratory attire and your happiest appetite! We're turning the dining room into a harvest hall this November, setting Justin's smoked meats beside Morgan's award-winning Arizona pecan pie and enough sides to settle every argument except the cranberry sauce."
+    items:
+      - "\"Justin's Slow-Smoked Meats (He Will Not Be Taking Smoker Questions)\""
+      - "\"Morgan's Award-Winning Arizona Pecan Pie (The Pie With a Trophy and a Temper)\""
+      - "\"Mashed Potatoes Whipped Within an Inch of Their Life\""
+      - "\"Cranberry Relish with Strong Opinions\""
+      - "\"Herb Cornbread Dressing, the Real Reason You Came\""
+      - "\"Green Beans, Butter, and Diplomacy\""
+      - "\"Gravy, in Indecent Quantities\""
+  - type: prose
+    paragraphs:
+      - "Bringing a dish? Wonderful! [Sign up here](rsvp) to claim your side and avoid four stuffings and no pie."
+  - type: cocktail
+    name: "Grateful Old Fashioned"
+    description: "bourbon, demerara, a dash of orange bitters, and a brandied cherry, finished with an orange peel expressed over the glass and a sprig of rosemary. Guaranteed to make every guest at the table feel like the guest of honor."
+  - type: callout
+    heading: "Did You Know?"
+    paragraphs:
+      - "Thanksgiving became a fixed national holiday in the middle of the nineteenth century, but the long table is older than the proclamation: harvest suppers, too much food, and a toast that runs long. From church-basement turkey to crystal coupes, the tradition has always been about making the people you love feel fed and fussed over. So whether your thanks is heartfelt or a little cheeky, your plate is part of a long history of celebrating abundance — and pretending you still have room for pie."
+  - type: callout
+    heading: "Mark Your Calendar:"
+    showCalendar: true
+    paragraphs:
+      - "The festivities begin on **Thursday, November 26, 2026**. Doors open at **5:00 PM** for appetizers, a cocktail, and the annual negotiation over who sits nearest the pecan pie. Get ready for an evening of fabulous food and fantastic company!"
+  - type: rsvp
+    heading: "RSVP to Foxy's Thanksgiving Day Dinner!"
+    kicker: "Gravy, Gratitude & Good Trouble"
+    paragraphs:
+      - "Join us for a glowing evening on **Thursday, November 26, 2026**!"
+      - "Whether you're giving thanks, being thanked, or just here for Morgan's pie and Justin's smoked meats, our table has room for everyone. Come ready to laugh, eat, and maybe get a little misty during a toast. All appetites welcome!"
+  - type: callout
+    heading: "Special Requests"
+    paragraphs:
+      - "Got dietary restrictions, a fierce cranberry allegiance, or a guest who considers pie its own food group? Let us know in your RSVP! We want every person at the table to feel completely looked after. Morgan's pecan pie stays legendary. The rest of the menu can flex."
+  - type: prose
+    rule: true
+    paragraphs:
+      - "Don't miss out on the fun! Our gatherings are legendary, and this Thanksgiving promises to be our most grateful, ridiculous, and delicious yet."
+  - type: actions
+    links:
+      - label: "Reserve Your Seat!"
+        to: rsvp
+      - label: "See FAQs"
+        to: faq

@@ -1,0 +1,18 @@
+---
+import FanRule from './FanRule.astro';
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="inner">
+    <FanRule />
+    <p class="footer-brand">Foxy's Dinner Party</p>
+    <p class="footer-tag">Black tie optional. Appetite mandatory.</p>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="/archive">Archive</a>
+      <a href="/faq">FAQ</a>
+    </nav>
+    <p class="fine">© {year} Foxy's Dinner Party</p>
+  </div>
+</footer>
