@@ -1,0 +1,73 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import FanRule from '../components/FanRule.astro';
+import faq from '../data/faq.json';
+import { pickFeatured } from '../lib/events';
+import { renderInline } from '../lib/inline';
+
+const featured = pickFeatured(await getCollection('events'));
+const rsvp = featured?.data.rsvpUrl ?? 'https://docs.google.com/spreadsheets/d/1a-KkhFHaeCP966Ak75BzxpR5PX4f3BLOmeK2XYbZXOU/edit?usp=sharing';
+const image = featured?.data.ogImage ?? '/images/thanksgiving/og.jpg';
+---
+
+<Base
+  title="Frequently Asked Questions · Foxy's Dinner Party"
+  description={faq.intro}
+  image={image}
+  path="/faq"
+>
+  <div class="page">
+    <div class="sheet">
+      <header class="sheet-head">
+        <p class="eyebrow">Before you pull up a chair</p>
+        <h1 class="display">{faq.titleLead}</h1>
+        <p class="display-sub">{faq.titleTail}</p>
+      </header>
+      <p class="lede prose" style="margin-top:1.5rem" set:html={renderInline(faq.intro, rsvp)} />
+
+      <div class="qa-list">
+        {
+          faq.questions.map((item, index) => (
+            <details class="qa" open={index === 0}>
+              <summary>
+                <span class="qa-num">{String(index + 1).padStart(2, '0')}</span>
+                <h2 class="qa-q">{item.question}</h2>
+                <span class="qa-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="qa-a">
+                <p set:html={renderInline(item.answer, rsvp)} />
+              </div>
+            </details>
+          ))
+        }
+      </div>
+
+      <div class="facts">
+        <FanRule />
+        <h2 class="section-title" style="margin-top:1.5rem">{faq.factsHeading}</h2>
+        <div class="fact-grid">
+          {
+            faq.facts.map((fact) => (
+              <article class="fact">
+                <h3>{fact.label}</h3>
+                <p set:html={renderInline(fact.body, rsvp)} />
+              </article>
+            ))
+          }
+        </div>
+      </div>
+
+      <div class="closing">
+        <FanRule />
+        <h2 class="section-title" style="margin-top:1.5rem">{faq.closingHeading}</h2>
+        <p class="lede" set:html={renderInline(faq.closing, rsvp)} />
+        <div class="actions center">
+          <a class="btn" href={rsvp} target="_blank" rel="noopener noreferrer">
+            {faq.cta}<span class="sr-only"> (opens in a new tab)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Base>

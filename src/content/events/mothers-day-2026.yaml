@@ -1,0 +1,101 @@
+# One file = one party. The filename is the URL: /events/mothers-day-2026
+# Home shows the earliest party whose date is today or later.
+# Times are wall-clock in the zone from src/config.ts.
+# The day after `date`, the next build lists it in the Archive. See README.md.
+
+title: "Foxy's Mother's Day Mayhem: A Celebration for the Moms We Love (and Survived)!"
+date: "2026-05-09"
+dateLabel: "Saturday, May 9th, 2026"
+time: "17:00"
+endTime: "22:00"
+doors: "5 PM"
+summary: "A spring evening for the moms we love (and survived), with Mom's Hall of Fame and a World's Best Mom-osa."
+rsvpUrl: "https://docs.google.com/spreadsheets/d/1a-KkhFHaeCP966Ak75BzxpR5PX4f3BLOmeK2XYbZXOU/edit?usp=sharing"
+rsvpLabel: "RSVP & Sign Up for Sides!"
+location: "Foxy's Dinner Party"
+hero: /images/mothers-day/hero.webp
+heroAlt: "A delighted mother at the wheel while three kids turn the car ride into cheerful mayhem"
+heroWidth: 1200
+heroHeight: 1200
+heroFrame: true
+ogImage: /images/mothers-day/og.jpg
+sections:
+  - type: prose
+    paragraphs:
+      - "Gather 'round, loved ones and lucky survivors! You're cordially invited to our annual, fabulous Mother's Day dinner party on **Saturday, May 9th, 2026**. Doors open at **5 PM** for an evening of springtime sparkle and family-fueled fun."
+      - "Prepare for a night packed with hearty laughter, sweet memories, and the finest company this side of Mom's patience. This year, we're unveiling our brand-new game: **Mom's Most Embarrassing Moments** show-and-tell! Bring a funny childhood photo or a story about something your mom said or did that still makes the family crack up. Whether it’s a legendary quote, an unforgettable mishap, or a perfectly awkward parenting moment, get ready to share the love and the laughs."
+      - "Whether you're celebrating your mom, your grandma, your aunt, or the incredible mother figure who helped shape you, there's always an extra seat — and definitely extra love — for you."
+  - type: actions
+    links:
+      - label: "RSVP & Sign Up for Sides!"
+        to: rsvp
+  - type: prose
+    heading: "Mom's Culinary Kingdom: A Mother's Day Feast!"
+    paragraphs:
+      - "Prepare your most celebratory (and mom-appreciated) attire and your happiest appetite! We're transforming our dining room into a haven of love and gratitude this May, combining our love for feasting with exquisite cuisine and delightful company. It’s a day to honor the incredible moms in our lives, make new memories, and enjoy every delicious bite!"
+  - type: menu
+    heading: "Sample Menu Highlights:"
+    items:
+      - "\"Fancy Brunch-for-Dinner Eggs Benedict (Because Mom Deserves It)\""
+      - "\"Spring Pea & Mint Soup (Elegant, Like Mom)\""
+      - "\"Rosé-Braised Chicken (She Earned It)\""
+      - "\"Strawberry Spinach Salad with Champagne Vinaigrette\""
+      - "\"Garlic Herb Roasted Potatoes (Mom's Secret Weapon)\""
+      - "\"Decadent Chocolate Lava Cake with Raspberry Coulis\""
+  - type: cocktail
+    name: "World's Best Mom-osa"
+    description: "a sparkling blend of champagne, fresh peach nectar, and a splash of raspberry, garnished with a sprig of mint and a tiny edible flower. Guaranteed to make every mom feel like royalty."
+    image: /images/mothers-day/illustration.webp
+    imageAlt: "Illustration of a mom relaxing in a wine glass beside a bottle labeled World's Best Mom"
+    imageWidth: 1100
+    imageHeight: 1100
+    frame: true
+    mat: true
+  - type: prose
+    paragraphs:
+      - "Get ready for the main event: **Mom's Hall of Fame**! This heartfelt and hilarious show-and-tell celebrates the moments and sayings that make moms unforgettable. Bring a funny childhood photo or write down the most iconic thing your mom has ever said. We'll display them anonymously and vote for **Most Relatable Mom Quote** and **Most Embarrassing Childhood Photo**."
+      - "Bringing a dish? Wonderful! [Sign up here](rsvp) to share your culinary masterpiece and avoid duplicates!"
+  - type: callout
+    heading: "Did You Know?"
+    paragraphs:
+      - "Mother's Day celebrations grew in popularity in the early 20th century as a way to honor mothers and mother figures with appreciation and love. From handwritten notes to shared meals, the tradition has always been about making moms feel special. So whether it's heartfelt or a little cheeky, your gift is part of a long history of celebrating amazing mothers!"
+  - type: callout
+    heading: "Mark Your Calendar:"
+    showCalendar: true
+    paragraphs:
+      - "The festivities begin on **Saturday, May 9th, 2026**. Doors open at **5:00 PM** for appetizers and mingling. Get ready for an evening of fabulous food and fantastic company!"
+  - type: rsvp
+    heading: "RSVP to Foxy's Mother's Day Mayhem!"
+    kicker: "Moms, Mimosas & Memories"
+    paragraphs:
+      - "Join us for a magical evening on **Saturday, May 9th, 2026**!"
+      - "Whether you're celebrating your own mom, being celebrated as a mom, or honoring a mom-figure in your life, our table has room for everyone. Come ready to laugh, eat, and maybe shed a happy tear or two. All mom-energy welcome!"
+  - type: callout
+    heading: "Special Requests"
+    paragraphs:
+      - "Got dietary restrictions or a mom with very specific tastes? Let us know in your RSVP! We want every guest (and every mom) to feel completely pampered. No fruitcake, we promise."
+  - type: prose
+    paragraphs:
+      - "🌸"
+  - type: steps
+    heading: "Mom's Hall of Fame"
+    lead: "How it works:"
+    paragraphs:
+      - "**Your Mission:** Bring a funny childhood photo OR write down the most iconic thing your mom has ever said."
+    steps:
+      - text: "Submit your photo or quote anonymously on arrival"
+      - label: "Gallery Walk"
+        text: "Browse the Hall of Fame with drinks in hand"
+      - label: "The Vote"
+        text: "Everyone votes for \"Most Relatable Mom Quote\" and \"Most Embarrassing Childhood Photo\""
+      - text: "Winners get bragging rights and a fabulous prize!"
+  - type: prose
+    rule: true
+    paragraphs:
+      - "Don't miss out on the fun! Our annual Mother's Day gathering is legendary, and this May mayhem promises to be our most heartfelt, hilarious, and memorable yet."
+  - type: actions
+    links:
+      - label: "Reserve Your Seat!"
+        to: rsvp
+      - label: "See FAQs"
+        to: faq

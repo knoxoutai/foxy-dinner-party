@@ -1,0 +1,286 @@
+---
+import FanRule from './FanRule.astro';
+import Figure from './Figure.astro';
+import DecoFrame from './DecoFrame.astro';
+import { renderInline } from '../lib/inline';
+import { timeZone } from '../config';
+import {
+  formatClock,
+  googleCalendarUrl,
+  isUpcoming,
+  toOffsetIso,
+  type Party,
+} from '../lib/events';
+
+interface Props {
+  event: Party;
+  featured?: boolean;
+}
+
+const { event, featured = false } = Astro.props;
+const data = event.data;
+const past = !isUpcoming(event);
+const site = Astro.site ?? new URL('https://foxydinnerparty.com');
+const pageUrl = new URL(featured ? '/' : `/events/${event.id}`, site).href;
+const gcal = googleCalendarUrl(data, pageUrl);
+const ics = `/events/${event.id}/event.ics`;
+const rsvp = data.rsvpUrl;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: data.title,
+  description: data.summary,
+  startDate: toOffsetIso(data.date, data.time),
+  endDate: toOffsetIso(data.date, data.endTime),
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  eventStatus: 'https://schema.org/EventScheduled',
+  image: new URL(data.ogImage, site).href,
+  url: pageUrl,
+  organizer: {
+    '@type': 'Organization',
+    name: "Foxy's Dinner Party",
+    url: site.href,
+  },
+  location: {
+    '@type': 'Place',
+    name: data.location ?? "Foxy's Dinner Party",
+    ...(data.address ? { address: data.address } : {}),
+  },
+};
+
+function hrefFor(to: 'rsvp' | 'faq' | 'home') {
+  if (to === 'rsvp') return rsvp;
+  if (to === 'faq') return '/faq';
+  return '/';
+}
+
+function showRule(section: (typeof data.sections)[number], index: number) {
+  if (section.rule === true) return true;
+  if (section.rule === false || index === 0) return false;
+  if (section.type === 'actions') return false;
+  if (section.type === 'prose' && !section.heading) return false;
+  return true;
+}
+---
+
+<article class="invitation">
+  {
+    past && (
+      <p class="crumb">
+        <a href="/archive">Archive</a>
+        <span aria-hidden="true"> / </span>
+        <span>Past party</span>
+      </p>
+    )
+  }
+  <header class="invite-head">
+    <p class="eyebrow">{past ? 'From the archive' : 'You are cordially invited'}</p>
+    <h1 class="display">{data.title}</h1>
+    <p class="when">
+      <span>{data.dateLabel}</span>
+      <span class="dot" aria-hidden="true">◆</span>
+      <span>Doors {data.doors}</span>
+    </p>
+  </header>
+
+  <figure class:list={['hero-figure', { mat: false }]}>
+    {
+      data.heroFrame ? (
+        <DecoFrame>
+          <img
+            src={data.hero}
+            alt={data.heroAlt}
+            width={data.heroWidth}
+            height={data.heroHeight}
+            fetchpriority="high"
+            decoding="async"
+          />
+        </DecoFrame>
+      ) : (
+        <img
+          src={data.hero}
+          alt={data.heroAlt}
+          width={data.heroWidth}
+          height={data.heroHeight}
+          fetchpriority="high"
+          decoding="async"
+        />
+      )
+    }
+  </figure>
+
+  {
+    past && (
+      <p class="past-note">
+        This party was held on {data.dateLabel}. The invitation is preserved below.
+        <a href="/"> See the next gathering.</a>
+      </p>
+    )
+  }
+
+  {
+    data.sections.map((section, index) => (
+      <section>
+        {showRule(section, index) && <FanRule />}
+        {section.type === 'prose' && (
+          <div class:list={['prose', { 'split has-image': Boolean(section.image) }]}>
+            {section.image && (
+              <Figure
+                src={section.image}
+                alt={section.imageAlt ?? ''}
+                width={section.imageWidth}
+                height={section.imageHeight}
+                frame={section.frame}
+                mat={section.mat}
+              />
+            )}
+            <div>
+              {section.heading && <h2 class="section-title">{section.heading}</h2>}
+              {section.paragraphs.map((paragraph) =>
+                paragraph.trim().length <= 2 ? (
+                  <p class="ornament-emoji">{paragraph}</p>
+                ) : (
+                  <p set:html={renderInline(paragraph, rsvp)} />
+                ),
+              )}
+            </div>
+          </div>
+        )}
+
+        {section.type === 'menu' && (
+          <div class:list={['split', { 'has-image': Boolean(section.image) }]}>
+            {section.image && (
+              <Figure
+                src={section.image}
+                alt={section.imageAlt ?? ''}
+                width={section.imageWidth}
+                height={section.imageHeight}
+                frame={section.frame}
+                mat={section.mat}
+              />
+            )}
+            <div class="menu-card">
+              <h2 class="section-title">{section.heading}</h2>
+              {section.intro && <p class="menu-intro" set:html={renderInline(section.intro, rsvp)} />}
+              <ul class="menu-list">
+                {section.items.map((item) => (
+                  <li set:html={renderInline(item, rsvp)} />
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
+
+        {section.type === 'cocktail' && (
+          <div class:list={['cocktail split', { 'has-image': Boolean(section.image) }]}>
+            {section.image && (
+              <Figure
+                src={section.image}
+                alt={section.imageAlt ?? ''}
+                width={section.imageWidth}
+                height={section.imageHeight}
+                frame={section.frame}
+                mat={section.mat}
+              />
+            )}
+            <div>
+              <h2 class="sr-only">{section.name}</h2>
+              <p class="concoction">
+                Our signature concoction: The{' '}
+                <strong class="cocktail-name">"{section.name}"</strong>
+                {' '}– <span set:html={renderInline(section.description, rsvp)} />
+              </p>
+            </div>
+          </div>
+        )}
+
+        {section.type === 'callout' && (
+          <div class="callout panel">
+            <h2 class="section-title">{section.heading}</h2>
+            {section.paragraphs.map((paragraph) => (
+              <p set:html={renderInline(paragraph, rsvp)} />
+            ))}
+            {section.showCalendar && (
+              <>
+                <div class="actions center">
+                  <a class="btn btn-ghost" href={ics}>Download .ics</a>
+                  <a class="btn btn-ghost" href={gcal} target="_blank" rel="noopener noreferrer">
+                    Google Calendar<span class="sr-only"> (opens in a new tab)</span>
+                  </a>
+                </div>
+                <p class="calendar-note">
+                  The calendar hold runs {formatClock(data.time)}–{formatClock(data.endTime)}, {timeZone}.
+                </p>
+              </>
+            )}
+          </div>
+        )}
+
+        {section.type === 'steps' && (
+          <div class:list={['split', { 'has-image': Boolean(section.image) }]}>
+            {section.image && (
+              <Figure
+                src={section.image}
+                alt={section.imageAlt ?? ''}
+                width={section.imageWidth}
+                height={section.imageHeight}
+                frame={section.frame}
+                mat={section.mat}
+              />
+            )}
+            <div class="steps-panel">
+              <h2 class="section-title">{section.heading}</h2>
+              {section.paragraphs?.map((paragraph) => (
+                <p set:html={renderInline(paragraph, rsvp)} />
+              ))}
+              {section.lead && <p class="kicker" style="margin-top:1.1rem">{section.lead}</p>}
+              <ol class="steps">
+                {section.steps.map((step) => (
+                  <li>
+                    <span set:html={renderInline(step.label ? `**${step.label}:** ${step.text}` : step.text, rsvp)} />
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        )}
+
+        {section.type === 'rsvp' && (
+          <div class="rsvp-panel panel">
+            <h2 class="section-title">{section.heading}</h2>
+            <p set:html={renderInline(section.paragraphs[0], rsvp)} />
+            {section.kicker && <p class="kicker" style="margin-top:1rem">{section.kicker}</p>}
+            {section.paragraphs.slice(1).map((paragraph) => (
+              <p set:html={renderInline(paragraph, rsvp)} />
+            ))}
+            <div class="actions center">
+              <a class="btn" href={rsvp} target="_blank" rel="noopener noreferrer">
+                {data.rsvpLabel}<span class="sr-only"> (opens in a new tab)</span>
+              </a>
+            </div>
+          </div>
+        )}
+
+        {section.type === 'actions' && (
+          <div class="actions center">
+            {section.links.map((link) =>
+              link.to === 'rsvp' ? (
+                <a class="btn" href={hrefFor(link.to)} target="_blank" rel="noopener noreferrer">
+                  {link.label}
+                  <span class="sr-only"> (opens in a new tab)</span>
+                </a>
+              ) : (
+                <a class:list={['btn', { 'btn-ghost': link.to !== 'rsvp' }]} href={hrefFor(link.to)}>
+                  {link.label}
+                </a>
+              ),
+            )}
+          </div>
+        )}
+      </section>
+    ))
+  }
+</article>
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

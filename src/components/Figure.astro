@@ -1,0 +1,43 @@
+---
+import DecoFrame from './DecoFrame.astro';
+
+interface Props {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  frame?: boolean;
+  mat?: boolean;
+  eager?: boolean;
+}
+
+const { src, alt, width, height, frame = false, mat = false, eager = false } = Astro.props;
+---
+
+<figure class:list={['figure', { mat }]}>
+  {
+    frame ? (
+      <DecoFrame>
+        <img
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          loading="eager"
+          decoding="async"
+          fetchpriority={eager ? 'high' : 'auto'}
+        />
+      </DecoFrame>
+    ) : (
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        loading="eager"
+        decoding="async"
+        fetchpriority={eager ? 'high' : 'auto'}
+      />
+    )
+  }
+</figure>

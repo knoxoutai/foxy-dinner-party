@@ -1,0 +1,57 @@
+{
+  "titleLead": "Frequently Asked Questions",
+  "titleTail": "(and Some Wildly True Stories)",
+  "intro": "Welcome to the most eclectic dinner party you'll ever attend! Before you join our motley crew of food lovers, international adventurers, and yes, even a carefully rationed number of engineers, let's answer some burning questions. Fair warning: these answers are 100% real, which is exactly what makes them so entertaining.",
+  "questions": [
+    {
+      "question": "Wait, is Morgan's pecan pie actually award-winning?",
+      "answer": "Oh yes! Morgan's legendary pecan pie proudly won awards in the great state of Arizona. It's achieved cult status among regulars. Pro tip: arrive early if you want a slice—this beauty disappears faster than free samples at Costco. The combination of buttery crust and perfectly caramelized pecans has converted even the staunchest pie skeptics."
+    },
+    {
+      "question": "Did you really have to ban firearms at a dinner party?",
+      "answer": "We most certainly did! Yes, there was an official memo. Yes, it's still in effect. Yes, we laughed about it. Then we made it a rule. Turns out when you bring together folks from every corner of the globe and all walks of life, you need to establish some ground rules. The only thing we're shooting here is the breeze and maybe some tequila."
+    },
+    {
+      "question": "Are engineers really allowed to attend?",
+      "answer": "Yes, but in limited quantities! We've implemented a strict engineer quota system to maintain optimal party dynamics. Nothing personal—we love our engineer friends—but too many in one room leads to extended debates about the most efficient way to slice pie. We're aiming for lively conversation, not whiteboard sessions about algorithm optimization."
+    },
+    {
+      "question": "Did you actually invite a Nazi to your Thanksgiving Party one year?",
+      "answer": "Yes, we did, but we had no idea at the time and it wasn't apparent until later in the party and a few drinks in. We strive to prevent true chaos that isn't fun and with good intention, but sometimes our kindness gets the best of us."
+    },
+    {
+      "question": "Is there a dress code?",
+      "answer": "Come as you are! We've had guests show up in everything from ball gowns to cargo shorts (sometimes simultaneously). The only requirement is bringing your authentic self and an appetite. Oh, and maybe leave the weapons at home—remember memo number one? We're casual, eclectic, and judgment-free. Express yourself!"
+    },
+    {
+      "question": "What should I bring?",
+      "answer": "Your sparkling personality is enough, but if you insist on contributing, bring your favorite dish, a bottle of something tasty, or simply stories from your life. We've had guests bring homemade kimchi, grandmother's secret pasta sauce, and mysterious desserts from distant lands. Everything's welcome except drama and yes, those things from the memo."
+    },
+    {
+      "question": "How do you handle dietary restrictions and food allergies?",
+      "answer": "Like culinary ninjas! We've successfully navigated everything from gluten-free guests to someone allergic to the color red (yes, that's a real thing). Just give us a heads up when you RSVP. We've become experts at creating inclusive menus that don't make anyone feel left out. Plus, our international crowd means we naturally have diverse options—from vegan Korean dishes to paleo-friendly Brazilian treats."
+    },
+    {
+      "question": "What if I don't know anyone? Will I be awkwardly standing alone?",
+      "answer": "Absolutely not! Our parties attract the most fascinating humans you'll ever meet—hypnotists from England, teachers from Texas, entrepreneurs from Australia, chefs from Oregon. Everyone's here to connect, laugh, and eat amazing food. We've never met a stranger who stayed a stranger for more than five minutes."
+    }
+  ],
+  "factsHeading": "A Few Delightfully True Fun Facts About Our Legendary Gatherings",
+  "facts": [
+    {
+      "label": "7 Countries",
+      "body": "We've proudly hosted guests from a record seven different countries under our roof across various dinner parties. It's like a mini United Nations meeting, but with better food and less bureaucracy! These gatherings have sparked conversations covering everything from Mongolian throat singing to the best street tacos in Mexico City."
+    },
+    {
+      "label": "Smoked Meats",
+      "body": "Our electric smoker generally does a decent job, but don't ask Justin about it. He maintains it's an abomination that produces \"meat-flavored sadness.\" While we *used to* let him bring his traditional smoker to keep the peace (and get good BBQ), those glorious days are largely over. The electric one is here to stay, much to his quiet frustration."
+    },
+    {
+      "label": "Vintage Vibes",
+      "body": "We always set the mood with some classic tunes as guests arrive—a subtle nod to our love for Fallout-style music from a bygone era. It's the perfect backdrop for mingling, before things inevitably get wild."
+    }
+  ],
+  "closingHeading": "Ready to Join the Chaos?",
+  "closing": "Our parties are where operations managers befriend fire dancers, where grandmothers swap recipes with startup founders, and where everyone leaves with new friends and probably too full from pie. We promise excellent food, fascinating humans, zero firearms, and a controlled number of engineers. What are you waiting for?",
+  "cta": "Save Your Spot at the Next Dinner"
+}
