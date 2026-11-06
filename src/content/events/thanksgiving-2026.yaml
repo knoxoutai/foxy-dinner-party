@@ -29,6 +29,8 @@ sections:
     links:
       - label: "RSVP & Sign Up for Sides!"
         to: rsvp
+      - label: "Next up: Christmas White Elephant"
+        to: "/events/christmas-2026"
   - type: steps
     heading: "Thanks, With Receipts"
     lead: "How it works:"

@@ -42,7 +42,7 @@ Section `type` values:
 - `callout` — `heading` and `paragraphs`. Set `showCalendar: true` for the .ics and Google Calendar links
 - `steps` — a game: `paragraphs`, optional `lead`, and `steps` (`text`, optional `label`)
 - `rsvp` — the closing invitation block and RSVP button
-- `actions` — buttons. `to` is `rsvp`, `faq`, or `home`
+- `actions` — buttons. `to` is `rsvp`, `faq`, `home`, or a site path such as `/events/christmas-2026`
 
 Inline marks inside any string: `**bold**`, `*italic*`, `[label](rsvp)` for the sheet, `[label](/faq)` for a site path.
 
