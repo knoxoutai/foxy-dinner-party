@@ -7,7 +7,8 @@
 # Home stays Thanksgiving through November 26, then this party can take over.
 # `time` and `endTime` are required by the schema; they are not a published
 # hold. Leave showCalendar off until the day and hour are real.
-# rsvpUrl is the Thanksgiving sheet for now. Add a Christmas tab's #gid= when it exists.
+# rsvpUrl opens the "Christmas White Elephant 2026" tab of the shared workbook.
+# Thanksgiving keeps the same spreadsheet without this gid.
 
 title: "Foxy's White Elephant Christmas: Abandoned Packages, Dubious Treasures, and the Gift Nobody Claims!"
 date: "2026-12-20"
@@ -16,7 +17,7 @@ time: "18:00"
 endTime: "22:00"
 doors: "TBD"
 summary: "A black-and-gold White Elephant Christmas with a gift swap, a flat of abandoned mystery packages, and a table set for anyone brave enough to open them."
-rsvpUrl: "https://docs.google.com/spreadsheets/d/1a-KkhFHaeCP966Ak75BzxpR5PX4f3BLOmeK2XYbZXOU/edit?usp=sharing"
+rsvpUrl: "https://docs.google.com/spreadsheets/d/1a-KkhFHaeCP966Ak75BzxpR5PX4f3BLOmeK2XYbZXOU/edit#gid=30468620"
 rsvpLabel: "RSVP & Claim a Mystery Package!"
 location: "Foxy's Dinner Party"
 hero: /images/christmas-2026/hero.webp
