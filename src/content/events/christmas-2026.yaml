@@ -1,0 +1,122 @@
+# One file = one party. The filename is the URL: /events/christmas-2026
+# Home shows the earliest party whose date is today or later.
+# Times are wall-clock in the zone from src/config.ts.
+# The day after `date`, the next build lists it in the Archive. See README.md.
+#
+# The evening is TBD. `date` is a December placeholder after Thanksgiving so
+# Home stays Thanksgiving through November 26, then this party can take over.
+# `time` and `endTime` are required by the schema; they are not a published
+# hold. Leave showCalendar off until the day and hour are real.
+# rsvpUrl is the Thanksgiving sheet for now. Add a Christmas tab's #gid= when it exists.
+
+title: "Foxy's White Elephant Christmas: Abandoned Packages, Dubious Treasures, and the Gift Nobody Claims!"
+date: "2026-12-20"
+dateLabel: "December 2026 — Date TBD"
+time: "18:00"
+endTime: "22:00"
+doors: "TBD"
+summary: "A black-and-gold White Elephant Christmas with a gift swap, a flat of abandoned mystery packages, and a table set for anyone brave enough to open them."
+rsvpUrl: "https://docs.google.com/spreadsheets/d/1a-KkhFHaeCP966Ak75BzxpR5PX4f3BLOmeK2XYbZXOU/edit?usp=sharing"
+rsvpLabel: "RSVP & Claim a Mystery Package!"
+location: "Foxy's Dinner Party"
+hero: /images/christmas-2026/hero.webp
+heroAlt: "A candlelit art deco dining room at night, with crystal coupes along a black velvet table and a mountain of gold gifts tied in black ribbon"
+heroWidth: 1280
+heroHeight: 720
+heroFrame: false
+ogImage: /images/christmas-2026/og.jpg
+sections:
+  - type: prose
+    paragraphs:
+      - "Gather 'round, gift-givers, gift-stealers, and anyone who has ever smiled at a present and thought, what have I done to deserve this? You're cordially invited to **Foxy's White Elephant Christmas**, a black-and-gold party in **December 2026**. The day is still being sealed in wax — **date TBD** — and the hour will be announced once the dining room is promised."
+      - "This year the parlor holds two kinds of trouble. First, a proper **White Elephant**: everyone brings a wrapped gift, numbers are drawn, and theft is not only legal but encouraged. Second, a **flat of abandoned packages** — mystery boxes whose contents are a secret to every person in the room, hosts included. Nobody knows what is inside. That is the entire sport."
+      - "Whether you come to steal, to be stolen from, or simply to eat something glittering by candlelight, there is a chair for you. Bring one wrapped gift if you want to play. Claim a mystery package when you RSVP. Leave the sensible presents at home."
+  - type: actions
+    links:
+      - label: "RSVP & Claim a Mystery Package!"
+        to: rsvp
+  - type: steps
+    heading: "White Elephant, Properly Played"
+    lead: "How the swap works:"
+    image: /images/christmas-2026/emblem.webp
+    imageAlt: "Gold art deco portrait of a fox in a top hat and bow tie beside a stack of sealed black-and-gold presents, holly, and mistletoe"
+    imageWidth: 1024
+    imageHeight: 1024
+    paragraphs:
+      - "The main event is a **White Elephant** with better tailoring. Bring one wrapped gift. No names on the outside, no hints, no last-minute confession in the hallway. Keep it delightful rather than expensive — ridiculous, charming, or inexplicably luxurious all qualify."
+      - "**Your Mission:** One anonymous present, wrapped like you mean it. Gold paper is encouraged. A note explaining the gift is a confession, and confessions can wait until after the steal."
+    steps:
+      - text: "Draw a number as you come in. Lower numbers go first and live with the consequences."
+      - label: "Open or Steal"
+        text: "On your turn, unwrap a new gift from the pile or steal one that is already open."
+      - label: "Three Steals"
+        text: "A gift may be stolen three times. After the third steal it is locked, and the person holding it has to look pleased."
+      - label: "The Last Word"
+        text: "When the final player sits down, the first player may steal once more — or keep whatever fate handed them."
+      - text: "The gift nobody wants becomes the legend of the night. Do not apologize for it. Do not try to regift it in the coat room."
+  - type: steps
+    heading: "The Flat of Abandoned Packages"
+    lead: "How a mystery package is claimed:"
+    paragraphs:
+      - "Beside the swap sits a **flat of abandoned packages**. They were not wrapped for anyone in particular. Their contents are a mystery to the guests and, we are delighted to admit, a mystery to us. Claim one when you [RSVP](rsvp) — one package per guest. They stay sealed until the swap is over, because patience is part of the glamour."
+      - "Opening is optional and public. If you love what you find, it is yours. If you do not, it goes back on the flat for someone braver. The package nobody claims stays wrapped. We will not open it for you."
+    steps:
+      - label: "Claim"
+        text: "Put your name on a mystery package in the signup sheet. If you forget, one may still find you."
+      - label: "Keep It Shut"
+        text: "Packages stay sealed through supper and through the White Elephant. A little shake is tradition. A full investigation is poor form."
+      - label: "Open"
+        text: "After the last steal, claimants open at the table, one at a time, while the room watches."
+      - label: "Trade Once"
+        text: "Before you cut the ribbon, you may trade your unopened package for another unopened package, once. After the paper tears, the treasure is yours."
+      - text: "If the contents are a delight, take a bow. If they are a riddle, take a bow anyway."
+  - type: menu
+    heading: "Sample Menu Highlights:"
+    image: /images/christmas-2026/packages.webp
+    imageAlt: "A ruby cocktail in cut crystal, chocolate truffles and peppermint bark on a gold tray, and a kraft package spilling gold ribbon, ringed with holly"
+    imageWidth: 1152
+    imageHeight: 864
+    intro: "Dress like the ornament you mean to be. We're turning the dining room into a winter salon: candlelight, cut crystal, and a supper glamorous enough to survive a round of theft and a second round of curiosity."
+    items:
+      - "\"Standing Rib Roast with a Gold-Leaf Confidence Problem\""
+      - "\"Brown-Butter Brussels, Hazelnuts, and No Apologies\""
+      - "\"Potato Gratin Layered Like a Well-Kept Secret\""
+      - "\"Cranberry-Glazed Carrots in Their Evening Wear\""
+      - "\"Yorkshire Pudding, Puffed and Slightly Smug\""
+      - "\"Citrus Salad with Pomegranate and a Sharp Opinion\""
+      - "\"Dark Chocolate Yule Log, the Gift Everyone Actually Claims\""
+  - type: prose
+    paragraphs:
+      - "Bringing a dish? Wonderful! [Sign up here](rsvp) to claim your plate and avoid four stuffings and no roast."
+  - type: cocktail
+    name: "Unclaimed Coupe"
+    description: "gin, crème de cassis, a barspoon of dry vermouth, and a splash of pomegranate, shaken until it blushes and served in cut crystal with a sugared cranberry. It looks like a secret and drinks like a toast. Guaranteed to make every guest at the table feel like they drew the good one."
+  - type: callout
+    heading: "Did You Know?"
+    paragraphs:
+      - "The White Elephant takes its name from a legend about rare, expensive, and spectacularly inconvenient presents — the sort of gift that looks like an honor and eats like a responsibility. Abandoned packages are the modern cousin: a box with no card, no claim, and no one willing to swear to the contents. We are simply giving that tradition better lighting, a fox in a top hat, and a table that refuses to be sensible."
+  - type: callout
+    heading: "The Date Is Still Under Wraps"
+    paragraphs:
+      - "The party is a **December 2026** evening. The day itself is **TBD**, and so is the hour the doors open. We will not put a calendar hold on a night we have not promised. When the date is sealed, this page will say so, and a proper calendar card will appear here."
+      - "Until then, [RSVP](rsvp) to claim your seat and, if you are feeling brave, one mystery package. We will write when the doors have an hour."
+  - type: rsvp
+    heading: "RSVP to Foxy's White Elephant Christmas!"
+    kicker: "Packages, Pilfering & Pomegranate"
+    paragraphs:
+      - "Join us for a glowing December evening — **date TBD**, and worth clearing the month for."
+      - "Whether you come to steal a gift, open a package nobody will explain, or simply sit near the roast until someone else is brave, the table has room. Come ready to laugh, eat, and look delighted by whatever the ribbon was hiding."
+  - type: callout
+    heading: "Special Requests"
+    paragraphs:
+      - "Got dietary restrictions, a hard no on peppermint, or a guest who considers the yule log its own food group? Tell us in your RSVP. The mystery packages stay mysterious. The menu can flex."
+  - type: prose
+    rule: true
+    paragraphs:
+      - "Don't miss the theft. Our gatherings are legendary, and this Christmas promises to be our most glittering, larcenous, and delicious yet."
+  - type: actions
+    links:
+      - label: "Reserve Your Seat!"
+        to: rsvp
+      - label: "See FAQs"
+        to: faq
