@@ -11,9 +11,13 @@ const media = {
   mat: z.boolean().optional(),
 };
 
+const sitePath = z
+  .string()
+  .regex(/^\/(?!\/)[A-Za-z0-9/_-]*$/, 'Use a site path such as /events/christmas-2026');
+
 const link = z.object({
   label: z.string(),
-  to: z.enum(['rsvp', 'faq', 'home']),
+  to: z.union([z.enum(['rsvp', 'faq', 'home']), sitePath]),
 });
 
 const dateString = z.preprocess(

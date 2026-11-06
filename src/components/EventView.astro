@@ -49,10 +49,11 @@ const jsonLd = {
   },
 };
 
-function hrefFor(to: 'rsvp' | 'faq' | 'home') {
+function hrefFor(to: string) {
   if (to === 'rsvp') return rsvp;
   if (to === 'faq') return '/faq';
-  return '/';
+  if (to === 'home') return '/';
+  return to;
 }
 
 function showRule(section: (typeof data.sections)[number], index: number) {
