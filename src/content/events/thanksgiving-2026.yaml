@@ -6,9 +6,9 @@
 title: "Foxy's Thanksgiving Day Dinner: A Celebration of Gratitude, Gravy, and the Pie We Fight Over!"
 date: "2026-11-26"
 dateLabel: "Thursday, November 26, 2026"
-time: "17:00"
+time: "14:00"
 endTime: "22:00"
-doors: "5:00 PM"
+doors: "2:00 PM"
 summary: "A candlelit Thanksgiving supper of gratitude, gravy, Justin's smoked meats, and Morgan's award-winning Arizona pecan pie."
 rsvpUrl: "https://docs.google.com/spreadsheets/d/1a-KkhFHaeCP966Ak75BzxpR5PX4f3BLOmeK2XYbZXOU/edit?usp=sharing"
 rsvpLabel: "RSVP & Sign Up for Sides!"
@@ -22,7 +22,7 @@ ogImage: /images/thanksgiving/og.jpg
 sections:
   - type: prose
     paragraphs:
-      - "Gather 'round, hungry hearts and lucky leftovers! You're cordially invited to our annual, fabulous Thanksgiving Day dinner party on **Thursday, November 26, 2026**. Doors open at **5:00 PM** for an evening of candlelight, cousins, and carbohydrates we will not be apologizing for."
+      - "Gather 'round, hungry hearts and lucky leftovers! You're cordially invited to our annual, fabulous Thanksgiving Day dinner party on **Thursday, November 26, 2026**. Doors open at **2:00 PM** for candlelight, cousins, and carbohydrates we will not be apologizing for."
       - "Prepare for a night packed with hearty laughter, second helpings, and the finest company this side of the gravy boat. This year, we're unveiling our brand-new game: **Thanks, With Receipts** show-and-tell! Bring a photo, a keepsake, or a story that proves what you're grateful for — and, if you're brave, the family tale that still makes the table lose it. Whether it's a legendary toast, an unforgettable kitchen mishap, or a perfectly awkward blessing, get ready to share the love, the laughs, and the pie."
       - "Whether you're celebrating with your people, borrowing ours, or simply in need of a chair and a warm plate, there's always an extra seat — and definitely extra gravy — for you."
   - type: actions
@@ -75,7 +75,7 @@ sections:
     heading: "Mark Your Calendar:"
     showCalendar: true
     paragraphs:
-      - "The festivities begin on **Thursday, November 26, 2026**. Doors open at **5:00 PM** for appetizers, a cocktail, and the annual negotiation over who sits nearest the pecan pie. Get ready for an evening of fabulous food and fantastic company!"
+      - "The festivities begin on **Thursday, November 26, 2026**. Doors open at **2:00 PM** for appetizers, a cocktail, and the annual negotiation over who sits nearest the pecan pie. Get ready for an evening of fabulous food and fantastic company!"
   - type: rsvp
     heading: "RSVP to Foxy's Thanksgiving Day Dinner!"
     kicker: "Gravy, Gratitude & Good Trouble"

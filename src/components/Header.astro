@@ -2,13 +2,15 @@
 const path = Astro.url.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '') || '/';
 const items = [
   { href: '/', label: 'Home' },
+  { href: '/events/christmas-2026', label: 'Christmas' },
   { href: '/archive', label: 'Archive' },
   { href: '/faq', label: 'FAQ' },
 ];
 
 function current(href: string) {
   if (href === '/') return path === '/';
-  return path === href;
+  const normalized = href.replace(/\/$/, '');
+  return path === normalized || path === `${normalized}/`;
 }
 ---
 
